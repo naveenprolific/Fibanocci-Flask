@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibanocci Series Upto N</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            text-align: center;
+        }
+        div.form
+        {
+            display: block;
+            text-align: center;
+        }
+        form
+        {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        input{
+            border: 2px solid #aaaaaa;
+            border-radius: 4px;
+        }
+        input:focus{
+            border-color: dodgerblue;
+            box-shadow: 0 0 8px 0 dodgerblue;
+        }
+        textarea {
+            padding: 10px;
+            line-height: 1.5;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px #999;
+        }
+    </style>
+</head>
+<body style="background-color:powderblue;">
+    <h3>Fibanocci Series Upto N</h3>
+    <div class="form">
+        <form action="{{ url_for('home') }}" method="post">
+            <input type="search" placeholder="Type N(<100000) for fibonacci" name="number">
+            <input type="submit" class="button" value="Print">
+        </form>
+    </div>
+    <div style="margin-top: 20px;">
+        <h6>{{ ls }}</h6>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
